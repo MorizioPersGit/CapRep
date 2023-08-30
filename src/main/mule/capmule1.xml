@@ -11,4 +11,8 @@ http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/htt
 		<http:listener doc:name="Listener" doc:id="3a84e8ed-ab1b-45fe-a712-811a7dbafe06" config-ref="HTTP_Listener_config" path="/test"/>
 		<logger level="INFO" doc:name="Logger" doc:id="d2a0417f-3061-44d7-831c-7bb1e91a0291" />
 	</flow>
+	<flow name="OnlyOnMASTER" doc:id="3a570080-9ed4-4d68-bbd8-bc89ce59c92d" >
+		<http:listener doc:name="Master" doc:id="e182de03-75ae-48ba-8609-79e1d3a0cf4c" config-ref="HTTP_Listener_config" path="/master"/>
+		<logger level="INFO" doc:name="Logger" doc:id="ee0cac50-c24a-4a6f-af39-d7a4a8e1a014" />
+	</flow>
 </mule>
